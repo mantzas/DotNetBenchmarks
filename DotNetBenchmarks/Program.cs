@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BenchmarkDotNet.Running;
+using System.Reflection;
 
 namespace DotNetBenchmarks
 {
@@ -10,6 +7,7 @@ namespace DotNetBenchmarks
     {
         static void Main(string[] args)
         {
+            BenchmarkSwitcher.FromAssembly(typeof(Program).GetTypeInfo().Assembly).Run(args);
         }
     }
 }
