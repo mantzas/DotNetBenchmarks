@@ -22,29 +22,29 @@ namespace DotNetBenchmarks.Logging
             streamWriter = CreateStreamWriter();
         }
 
-        [Benchmark(Baseline = true, Description = "Console Write Line")]
-        public string ConsoleMethod()
+        [Benchmark(Baseline = true, Description = "File Stream Writer")]
+        public string StreamWriterBenchmark()
         {
             streamWriter.WriteLine(message, DateTime.Now);
             return message;
         }
 
         [Benchmark(Description = "NLog")]
-        public string NLogMethod()
+        public string NLogBenchmark()
         {
             nlogLogger.Info(message, DateTime.Now);
             return message;
         }
 
         [Benchmark(Description = "Log4Net")]
-        public string Log4NetMethod()
+        public string Log4NetBenchmark()
         {
             log4NetLogger.InfoFormat(message, DateTime.Now);
             return message;
         }
 
         [Benchmark(Description = "Serilog")]
-        public string SerilogMethod()
+        public string SerilogBenchmark()
         {
             serilogLogger.Information(message, DateTime.Now);
             return message;
