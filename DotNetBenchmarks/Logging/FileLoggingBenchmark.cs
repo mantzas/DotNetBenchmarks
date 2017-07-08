@@ -24,7 +24,7 @@ namespace DotNetBenchmarks.Logging
 
         [Benchmark(Baseline = true, Description = "Console Write Line")]
         public string ConsoleMethod()
-        {         
+        {
             streamWriter.WriteLine(message, DateTime.Now);
             return message;
         }
@@ -72,12 +72,10 @@ namespace DotNetBenchmarks.Logging
 
             config.AddTarget("logfile", target);
 
-            
             var rule = new NLog.Config.LoggingRule("*", NLog.LogLevel.Debug, target);
 
             config.LoggingRules.Add(rule);
 
-            
             NLog.LogManager.Configuration = config;
             return NLog.LogManager.GetCurrentClassLogger();
         }
@@ -99,7 +97,6 @@ namespace DotNetBenchmarks.Logging
             };
             roller.ActivateOptions();
             hierarchy.Root.AddAppender(roller);
-            
             hierarchy.Root.Level = log4net.Core.Level.Info;
             hierarchy.Configured = true;
             return log4net.LogManager.GetLogger(typeof(FileLoggingBenchmark));

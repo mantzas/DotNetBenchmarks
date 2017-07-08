@@ -3,11 +3,13 @@ using System.Reflection;
 
 namespace DotNetBenchmarks
 {
-    class Program
+#pragma warning disable RCS1102 // Make class static.
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             BenchmarkSwitcher.FromAssembly(typeof(Program).GetTypeInfo().Assembly).Run(args);
         }
     }
+#pragma warning restore RCS1102 // Make class static.
 }
