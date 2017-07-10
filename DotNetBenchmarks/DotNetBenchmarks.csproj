@@ -169,11 +169,28 @@
     <Compile Include="Logging\FileLoggingBenchmark.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\DateTimeToStringBenchmark.cs" />
+    <Compile Include="Types\ForVsForeachBenchmark.cs" />
+    <Compile Include="Types\StringConcatenationBenchmark.cs" />
+    <Compile Include="Types\ThrowVsNotThrowBenchmark .cs" />
+    <Compile Include="Types\ToArrayVsIEnumerableVsToListBenchmark.cs" />
+    <Compile Include="XML\Model.cs" />
+    <Compile Include="XML\XmlDeserializeVsXmlReaderBenchmark.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\DateTimeToStringBenchmark-report-github.md" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\DateTimeToStringBenchmark-report.csv" />
     <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\FileLoggingBenchmark-report-github.md" />
     <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\FileLoggingBenchmark-report.csv" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\ForVsForeachBenchmark-report-github.md" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\ForVsForeachBenchmark-report.csv" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\StringConcatenationBenchmark-report-github.md" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\StringConcatenationBenchmark-report.csv" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\ThrowVsNotThrowBenchmark-report-github.md" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\ThrowVsNotThrowBenchmark-report.csv" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\ToArrayVsIEnumerableVsToListBenchmark-report-github.md" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\ToArrayVsIEnumerableVsToListBenchmark-report.csv" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -181,7 +198,16 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Release\BenchmarkDotNet.Artifacts\results\DateTimeToStringBenchmark-report.html" />
     <Content Include="bin\Release\BenchmarkDotNet.Artifacts\results\FileLoggingBenchmark-report.html" />
+    <Content Include="bin\Release\BenchmarkDotNet.Artifacts\results\ForVsForeachBenchmark-report.html" />
+    <Content Include="bin\Release\BenchmarkDotNet.Artifacts\results\StringConcatenationBenchmark-report.html" />
+    <Content Include="bin\Release\BenchmarkDotNet.Artifacts\results\ThrowVsNotThrowBenchmark-report.html" />
+    <Content Include="bin\Release\BenchmarkDotNet.Artifacts\results\ToArrayVsIEnumerableVsToListBenchmark-report.html" />
+    <Content Include="XML\BenchmarkTest.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

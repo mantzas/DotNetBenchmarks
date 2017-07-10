@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>FileLoggingBenchmark</title>
+<title>ForVsForeachBenchmark</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,12 +22,10 @@ Frequency=2338339 Hz, Resolution=427.6540 ns, Timer=TSC
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>        Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Scaled</th><th>ScaledSD</th><th>Gen 0</th><th>Allocated</th>
+<thead><tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Scaled</th><th>ScaledSD</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>'File Stream Writer'</td><td>2.140 us</td><td>0.0175 us</td><td>0.0137 us</td><td>1.00</td><td>0.00</td><td>0.1640</td><td>524 B</td>
-</tr><tr><td>          NLog</td><td>215.538 us</td><td>5.5825 us</td><td>15.7456 us</td><td>100.71</td><td>7.34</td><td>10.7422</td><td>33850 B</td>
-</tr><tr><td>       Log4Net</td><td>194.455 us</td><td>4.0656 us</td><td>8.8382 us</td><td>90.86</td><td>4.13</td><td>1.7090</td><td>5489 B</td>
-</tr><tr><td>       Serilog</td><td>11.702 us</td><td>0.1012 us</td><td>0.0947 us</td><td>5.47</td><td>0.05</td><td>0.3052</td><td>976 B</td>
+</thead><tbody><tr><td> For</td><td>135.3 us</td><td>0.5712 us</td><td>0.5343 us</td><td>1.00</td><td>0.00</td><td>0 B</td>
+</tr><tr><td>'For each'</td><td>416.8 us</td><td>2.8199 us</td><td>2.4997 us</td><td>3.08</td><td>0.02</td><td>0 B</td>
 </tr></tbody></table>
 </body>
 </html>

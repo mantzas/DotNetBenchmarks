@@ -1,15 +1,38 @@
 ﻿using BenchmarkDotNet.Running;
+using System;
 using System.Reflection;
 
 namespace DotNetBenchmarks
 {
-#pragma warning disable RCS1102 // Make class static.
     public class Program
     {
         public static void Main(string[] args)
         {
-            BenchmarkSwitcher.FromAssembly(typeof(Program).GetTypeInfo().Assembly).Run(args);
+            var switcher = BenchmarkSwitcher.FromAssembly(typeof(Program).GetTypeInfo().Assembly);
+
+            while (true)
+            {
+                Console.WriteLine("[S]elect benchmarks, run [A]ll or [ESC] to exit?");
+
+                switch (Console.ReadKey(true).Key)
+                {
+                    case ConsoleKey.A:
+                        switcher.RunAll();
+                        return;
+
+                    case ConsoleKey.S:
+                        switcher.Run(args);
+                        return;
+
+                    case ConsoleKey.Escape:
+                        Console.WriteLine("Exiting...");
+                        return;
+
+                    default:
+                        Console.WriteLine("Invalid selection!");
+                        break;
+                }
+            }
         }
     }
-#pragma warning restore RCS1102 // Make class static.
 }

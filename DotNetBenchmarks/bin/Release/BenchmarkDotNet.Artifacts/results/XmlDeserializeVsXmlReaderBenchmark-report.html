@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>FileLoggingBenchmark</title>
+<title>XmlDeserializeVsXmlReaderBenchmark</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,12 +22,10 @@ Frequency=2338339 Hz, Resolution=427.6540 ns, Timer=TSC
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>        Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Scaled</th><th>ScaledSD</th><th>Gen 0</th><th>Allocated</th>
+<thead><tr><th> Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Scaled</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>'File Stream Writer'</td><td>2.140 us</td><td>0.0175 us</td><td>0.0137 us</td><td>1.00</td><td>0.00</td><td>0.1640</td><td>524 B</td>
-</tr><tr><td>          NLog</td><td>215.538 us</td><td>5.5825 us</td><td>15.7456 us</td><td>100.71</td><td>7.34</td><td>10.7422</td><td>33850 B</td>
-</tr><tr><td>       Log4Net</td><td>194.455 us</td><td>4.0656 us</td><td>8.8382 us</td><td>90.86</td><td>4.13</td><td>1.7090</td><td>5489 B</td>
-</tr><tr><td>       Serilog</td><td>11.702 us</td><td>0.1012 us</td><td>0.0947 us</td><td>5.47</td><td>0.05</td><td>0.3052</td><td>976 B</td>
+</thead><tbody><tr><td>XmlSerializer</td><td>74.83 ms</td><td>0.4180 ms</td><td>0.3706 ms</td><td>1.00</td><td>875.0000</td><td>687.5000</td><td>250.0000</td><td>4.2 MB</td>
+</tr><tr><td>XmlReader</td><td>34.89 ms</td><td>0.4235 ms</td><td>0.3754 ms</td><td>0.47</td><td>500.0000</td><td>437.5000</td><td> -</td><td>2.95 MB</td>
 </tr></tbody></table>
 </body>
 </html>

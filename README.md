@@ -1,21 +1,51 @@
 # DotNetBenchmarks
-Various benchmarks
+
+These are various benchmarks in order to see the performance impact.
+
+The following things hold true for these benchmarks
+
+- These benchmark are not conducted in order to make certain libraries look good or bad
+- Please create a issue or better make a PR if you think that the benchmark methodology is wrong or the setup is wrong
+- Do not take the results as granted and conduct your own benchmarks to see if in the context of your application the results differ
 
 ## File Logging Benchmark Results
 
-``` ini
+The following benchmark tries to evaluate various logging frameworks when logging to a file.
 
-BenchmarkDotNet=v0.10.8, OS=Windows 10 Redstone 2 (10.0.15063)
-Processor=Intel Core i7-4700MQ CPU 2.40GHz (Haswell), ProcessorCount=8
-Frequency=2338339 Hz, Resolution=427.6540 ns, Timer=TSC
-  [Host]     : Clr 4.0.30319.42000, 32bit LegacyJIT-v4.7.2098.0
-  DefaultJob : Clr 4.0.30319.42000, 32bit LegacyJIT-v4.7.2098.0
+[File Logging Results](https://github.com/mantzas/DotNetBenchmarks/blob/master/DotNetBenchmarks/bin/Release/BenchmarkDotNet.Artifacts/results/FileLoggingBenchmark-report-github.md)
 
+## DateTime ToString Benchmarks
 
-```
- |               Method |       Mean |     Error |    StdDev | Scaled | ScaledSD |   Gen 0 | Allocated |
- |--------------------- |-----------:|----------:|----------:|-------:|---------:|--------:|----------:|
- | 'File Stream Writer' |   2.104 us | 0.0359 us | 0.0336 us |   1.00 |     0.00 |  0.1602 |     516 B |
- |                 NLog | 186.640 us | 3.6601 us | 6.9637 us |  88.73 |     3.55 | 10.7422 |   33850 B |
- |              Log4Net | 172.830 us | 3.4218 us | 6.7544 us |  82.17 |     3.43 |  1.7090 |    5489 B |
- |              Serilog |  11.747 us | 0.1219 us | 0.1018 us |   5.58 |     0.10 |  0.3052 |     976 B |
+The following benchmark tries to evaluate various ToString methods on a DateTime.
+
+[DateTime ToString Results](https://github.com/mantzas/DotNetBenchmarks/blob/master/DotNetBenchmarks/bin/Release/BenchmarkDotNet.Artifacts/results/DateTimeToStringBenchmark-report-github.md)
+
+## For vs ForEach Benchmarks
+
+The following benchmark tries to evaluate the cost of for vs foreach loops.
+
+[For vs Foreach Results](https://github.com/mantzas/DotNetBenchmarks/blob/master/DotNetBenchmarks/bin/Release/BenchmarkDotNet.Artifacts/results/ForVsForeachBenchmark-report-github.md)
+
+## String Concatenation Benchmarks
+
+The following benchmark tries to evaluate various methods of string concatenation.
+
+[String ConcatenationForeach Results](https://github.com/mantzas/DotNetBenchmarks/blob/master/DotNetBenchmarks/bin/Release/BenchmarkDotNet.Artifacts/results/StringConcatenationBenchmark-report-github.md)
+
+## Throw vs Not Throw Benchmarks
+
+The following benchmark tries to evaluate the cost of throwing exceptions.
+
+[Throw vs Not Throw Results](https://github.com/mantzas/DotNetBenchmarks/blob/master/DotNetBenchmarks/bin/Release/BenchmarkDotNet.Artifacts/results/ThrowVsNotThrowBenchmark-report-github.md)
+
+## IEnumerable vs ToArray and ToList Conversion Benchmark
+
+The following benchmark tries to evaluate the cost of using IEnumerable Linq vs ToArray or ToList conversions.
+
+[IEnumerable vs ToArray and ToList Conversion Results](https://github.com/mantzas/DotNetBenchmarks/blob/master/DotNetBenchmarks/bin/Release/BenchmarkDotNet.Artifacts/results/ToArrayVsIEnumerableVsToListBenchmark-report-github.md)
+
+## Xml Deserialize Vs Xml Reader Benchmark
+
+The following benchmark tries to evaluate the cost deserializing with XmlSerializer vs XmlReader.
+
+[Xml Deserialize Vs Xml Reader Benchmark Results](https://github.com/mantzas/DotNetBenchmarks/blob/master/DotNetBenchmarks/bin/Release/BenchmarkDotNet.Artifacts/results/XmlDeserializeVsXmlReaderBenchmark-report-github.md)
