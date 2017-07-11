@@ -191,6 +191,8 @@
     <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\ThrowVsNotThrowBenchmark-report.csv" />
     <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\ToArrayVsIEnumerableVsToListBenchmark-report-github.md" />
     <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\ToArrayVsIEnumerableVsToListBenchmark-report.csv" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\XmlDeserializeVsXmlReaderBenchmark-report-github.md" />
+    <None Include="bin\Release\BenchmarkDotNet.Artifacts\results\XmlDeserializeVsXmlReaderBenchmark-report.csv" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -204,6 +206,7 @@
     <Content Include="bin\Release\BenchmarkDotNet.Artifacts\results\StringConcatenationBenchmark-report.html" />
     <Content Include="bin\Release\BenchmarkDotNet.Artifacts\results\ThrowVsNotThrowBenchmark-report.html" />
     <Content Include="bin\Release\BenchmarkDotNet.Artifacts\results\ToArrayVsIEnumerableVsToListBenchmark-report.html" />
+    <Content Include="bin\Release\BenchmarkDotNet.Artifacts\results\XmlDeserializeVsXmlReaderBenchmark-report.html" />
     <Content Include="XML\BenchmarkTest.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
